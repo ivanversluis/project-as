@@ -3,11 +3,11 @@ Version: 0.5
 
 Date: 17/09/2025
 
-## What I'm Building and Why
+## Introduction
 
-After years working as a cloud, network and solution consultant, I finally decided to stop talking about BGP and actually **run my own AS**. This isn't a lab experiment - I want to have peering relationships, proper RIPE management, and monitoring that would make any network engineer proud.
+After years working as a cloud, network and solution consultant, I finally decided to master BGP and actually **run my own AS**. This isn't a standalone experiment - I want to have peering relationships, proper RIPE management, and monitoring that would make any network engineer proud.
 
-The plan starts simple: Create a Hugo website on GitHub, delivered through Cloudflare CDN. Clean, fast, and gives me a professional presence for the AS. Then comes the fun part - diving into BGP, RIPE procedures, and building something that actually works in the real world. On top of everything keeping cyber security practices as foundational block of setting everything up (secrets management, IP whitelisting, segmentation, SSO).
+The plan starts simple: Create a Hugo website content on this GitHub repository and publish it through Cloudflare CDN. Clean and fast that gives me a professional presence for the AS. Then comes the fun part - diving into BGP, RIPE procedures, and building something that actually works in the real world. On top of everything I will implement cyber security practices as a foundational block of setting up environments (secrets management, IP whitelisting, segmentation, SSO).
 
 ## Technical Setup - The infrastructure
 
@@ -36,9 +36,9 @@ Three core systems running as containerized applications, deployed via ArgoCD:
 All application configurations stored in Git, deployed automatically by ArgoCD, with proper persistent storage and ingress configuration.
 
 **WireGuard tunnel to my home network**
-The entire cloud setup routes back to my home network through a WireGuard tunnel terminating on my MikroTik router. This gives me secure connectivity between my AS infrastructure and home lab, plus redundancy if I need to fail services over.
+The entire setup routes back to my home network through a WireGuard tunnel terminating on my MikroTik router. This gives me secure connectivity between my AS infrastructure and home network, plus redundancy if I need to fail services over.
 
-My home MikroTik roouter handles the WireGuard server role with proper routing tables managed by Terraform.
+My home MikroTik roouter handles the WireGuard server role configuration managed by Terraform.
 
 **BGP and AS operations**
 This is where it gets interesting. I want to understand BGP at the packet level, know RIPE procedures by heart, and have peering agreements that actually work. Route filtering, prefix announcements, peer selection, traffic engineering - the whole stack. MikroTik will be my main network OS until I master these concepts.
